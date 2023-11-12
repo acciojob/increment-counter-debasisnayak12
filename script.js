@@ -4,16 +4,10 @@ const incrementElem = document.getElementById('incrementBtn');
 
 let counterValue = 0;
 
-const updateCounter = () => {
-	counterElem.textContent = counterValue;
-};
+incrementElem.addEventListener('click',increase);
 
-const incCounter = () => {
-	alert(`un-incremented value: ${counterValue}`);
-	
+function increase(){
+	alert(counterValue);
 	counterValue++;
-	updateCounter();
-};
-
-incrementElem.addEventListener('click',incCounter);
-
+	counterElem.innerHTML = counterValue;
+}
